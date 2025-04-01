@@ -27,6 +27,7 @@ html {
 
 body {
     margin: 0;
+    background-color: var(--clr-climbinglogger-teal);
 }
 
 *,
@@ -118,6 +119,7 @@ button {
     padding-top: 2rem;
     flex-direction: column;
     overflow: hidden;
+    gap: 1em;
 }
 
 .training-themes .tags {
@@ -249,12 +251,6 @@ button {
     font-weight: 700;
 }
 
-h3 {
-    font-size: 1.75rem;
-    filter: drop-shadow(var(--clr-nav-bg-shadow) 0.1em 0.1em 0.15em);
-    text-align: center;
-}
-
 section {
     display: flex;
     /*max-height: 100vh;*/
@@ -266,7 +262,7 @@ p {
 }
 
 h1 {
-    font-size: 6.5rem;
+    font-size: 6rem;
     text-align: center;
     padding-top: 0;
     margin: 0;
