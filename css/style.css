@@ -14,6 +14,10 @@
     --clr-new-top: hsl(229 13% 42%);
     --clr-new-mid: hsl(221 16% 74%);
     --clr-gradient-new: linear-gradient(var(--clr-new-top), var(--clr-new-mid));
+    --clr-climbinglogger-teal: hsl(198 56% 43%);
+    --clr-training-tags-1: hsl(69 39% 74%);
+    --clr-training-tags-2: hsl(244 39% 74%);
+    --clr-training-tags-3: hsl(32 39% 74%);
 }
 
 html {
@@ -47,15 +51,142 @@ header {
     align-items: center;
 }
 
-h1 {
+/*h1 {
     color: var(--clr-logo-text);
     filter: drop-shadow(var(--clr-nav-bg-shadow) 0.1em 0.1em 0.15em);
-}
+}*/
 
 button {
     border: 0;
     border-radius: 1em;
     padding: 1rem;
+}
+
+.climbingloggerburner {
+    background-color: var(--clr-climbinglogger-teal);
+    overflow: hidden;
+}
+
+.climbingloggerburner img {
+    margin-top: -10%;
+    transform: scale(1.2);
+}
+
+.cta {
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.cta-button {
+    background-color: #000;
+    border: 1em solid white;
+    border-radius: 2em;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.cta-button a {
+    color: #fff;
+    text-decoration: none;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+
+.cta-button h1 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.cta-button h2 {
+    font-size: 1.25rem;
+    line-height: 0.2;
+}
+.cta-button h3 {
+    font-size: 1.25rem;
+    line-height: 0.3;
+}
+
+.bugs {
+    margin-bottom: -98%;
+}
+
+.training-themes {
+    background-color: #000;
+    color: #fff;
+    margin: auto;
+    padding-top: 2rem;
+    flex-direction: column;
+}
+
+.training-themes .tags {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.training-themes .tags div {
+    background-color: var(--clr-training-tags-1);
+    border-radius: 1em;
+    padding: 1em;
+    color: #000;
+}
+
+.training-themes .tags div.shoulders {
+    background-color: var(--clr-training-tags-2);
+}
+
+.training-themes .tags div.footwork {
+    background-color: var(--clr-training-tags-3);
+}
+
+.training-themes div {
+    align-items: center;
+    margin: auto;
+}
+
+.training-themes p {
+    text-align: center;
+    font-size: 2rem;
+   
+}
+
+.training-themes p span {
+    font-weight: 900;
+}
+
+.climbinglogger-tag {
+    background: linear-gradient(black 50%, var(--clr-climbinglogger-teal) 50%);
+    overflow: hidden;
+    align-items: center;
+}
+
+.climbinglogger-tag img {
+    margin-bottom: -45%;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.exercises {
+    background-color: var(--clr-climbinglogger-teal);
+    color: #fff;
+    flex-direction: column;
+}
+
+.exercises p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.motivation {
+    background-color: var(--clr-climbinglogger-teal);
+    color: #fff;
+    flex-direction: column;
+}
+
+.motivation p {
+    text-align: center;
+    font-size: 2rem;
 }
 
 .report-btn {
@@ -128,17 +259,23 @@ section {
 
 p {
     margin: 0;
-    line-height: 1.3;
+}
+
+h1 {
+    font-size: 7rem;
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
 }
 
 section p + p {
     margin-top: 1rem;
 }
 
-section img {
+/*section img {
     width: 20em;
     aspect-ratio: 1;
-}
+}*/
 
 .serious {
     background: var(--clr-gradient-serious);
@@ -199,11 +336,6 @@ ul {
 li {
     flex-basis: 0;
     flex-grow: 1;
-    background: var(--clr-gradient-serious);
-    border-radius: 2em;
-    border-style: solid;
-    border-color: hsl(0, 0%, 50%);
-    border-width: 0.1em;
     padding: 2em 1em;
 }
 
@@ -211,6 +343,15 @@ li {
     text-align: center;
     font-size: 1.25rem;
     font-weight: bold;
+}
+
+p.usp-emoji {
+    text-align: center;
+    font-size: 4rem;
+}
+
+p.usp-body {
+    font-size: 1.5rem;
 }
 
 @media (min-width: 50rem) {
@@ -249,5 +390,8 @@ li {
     ul {
         flex-direction: row;
         /*max-width: 60vw;*/
+    }
+    .climbingloggerburner img {
+        transform: scale(1);
     }
 }
