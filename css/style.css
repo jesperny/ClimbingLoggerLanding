@@ -173,6 +173,7 @@ button {
     background-color: var(--clr-climbinglogger-teal);
     color: #fff;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .exercises p {
@@ -184,6 +185,7 @@ button {
     background-color: var(--clr-climbinglogger-teal);
     color: #fff;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .motivation p {
