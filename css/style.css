@@ -117,12 +117,14 @@ button {
     margin: auto;
     padding-top: 2rem;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .training-themes .tags {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    overflow: hidden;
 }
 
 .training-themes .tags div {
@@ -147,7 +149,7 @@ button {
 
 .training-themes p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
    
 }
 
@@ -262,7 +264,7 @@ p {
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: 6.5rem;
     text-align: center;
     padding-top: 0;
     margin: 0;
