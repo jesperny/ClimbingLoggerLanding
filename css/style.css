@@ -225,7 +225,7 @@ p {
 h1 {
     font-size: 4rem;
     text-align: center;
-    padding-top: 0;
+    padding-top: 2rem;
     margin: 0;
 }
 
@@ -308,6 +308,6 @@ p.usp-body {
     }
 
     h1 {
-        font-size: 6vw;
+        font-size: 8vw;
     }
 }
