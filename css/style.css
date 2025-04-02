@@ -1,19 +1,4 @@
 :root {
-    --clr-nav-bg: hsl(192 13% 50%);
-    --clr-nav-bottom-bg: hsl(192 12% 47%);
-    --clr-nav-bg-shadow: hsl(192 20% 30%);
-    --clr-report-btn-bg: hsl(246 17% 24%);
-    --clr-logo-text: hsl(0 0% 100%);
-    --clr-gradient-nav: linear-gradient(var(--clr-nav-bg), var(--clr-nav-bottom-bg));
-    --clr-serious-top: hsl(0 0% 22%);
-    --clr-serious-bottom: hsl(0 0% 2%);
-    --clr-gradient-serious: linear-gradient(var(--clr-serious-top), var(--clr-serious-bottom));
-    --clr-fun-top: hsl(300 41% 3%);
-    --clr-fun-bottom: hsl(245 8% 31%);
-    --clr-gradient-fun: linear-gradient(var(--clr-fun-top), var(--clr-fun-bottom));
-    --clr-new-top: hsl(229 13% 42%);
-    --clr-new-mid: hsl(221 16% 74%);
-    --clr-gradient-new: linear-gradient(var(--clr-new-top), var(--clr-new-mid));
     --clr-climbinglogger-teal: hsl(198 56% 43%);
     --clr-training-tags-1: hsl(69 39% 74%);
     --clr-training-tags-2: hsl(244 39% 74%);
@@ -40,12 +25,6 @@ img {
     max-width: 100%;
 }
 
-.logo-img {
-    width: min(20%, 7rem);
-    aspect-ratio: 1 / 1;
-    margin-left: -2%;
-}
-
 header {
     display: flex;
     background: var(--clr-gradient-nav);
@@ -66,11 +45,12 @@ button {
 .climbingloggerburner {
     background-color: var(--clr-climbinglogger-teal);
     overflow: hidden;
+    max-height: 80vh;
 }
 
 .climbingloggerburner img {
-    margin-top: -10%;
-    transform: scale(1.2);
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .cta {
@@ -78,6 +58,11 @@ button {
     flex-direction: column;
     align-items: center;
     padding-top: 3rem;
+}
+.cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta-button {
@@ -108,9 +93,9 @@ button {
     line-height: 0.3;
 }
 
-.bugs {
+/*.bugs {
     margin-bottom: -98%;
-}
+}*/
 
 .training-themes {
     background-color: #000;
@@ -126,6 +111,13 @@ button {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    overflow: hidden;
+}
+
+.training-themes .tags-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -149,9 +141,13 @@ button {
     margin: auto;
 }
 
+.training-themes .tags p {
+    font-size: 1rem;
+}
+
 .training-themes p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
    
 }
 
@@ -162,11 +158,22 @@ button {
 .climbinglogger-tag {
     background: linear-gradient(black 50%, var(--clr-climbinglogger-teal) 50%);
     overflow: hidden;
-    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .climbinglogger-tag img {
-    margin-bottom: -45%;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.climbinglogger-logo {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.climbinglogger-logo img {
     width: 100%;
     max-width: 1000px;
 }
@@ -195,51 +202,6 @@ button {
     font-size: 2rem;
 }
 
-.report-btn {
-    margin-left: auto;
-    background-color: var(--clr-report-btn-bg);
-    display: none;
-}
-
-.report-btn a {
-    color: var(--clr-logo-text);
-    text-decoration: none;
-    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    text-align: center;
-}
-
-.hero-content>p {
-    text-align: center;
-    margin-top: 0.2rem;
-    font-size: 0.8rem;
-}
-
-.hero2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-
-.hero2 img {
-    width: 20em;
-    aspect-ratio: 0.96;
-    transform: translateX(1.5%);
-}
-
 .cta-btn {
     background-color: var(--clr-nav-bg);
 }
@@ -253,7 +215,6 @@ button {
 
 section {
     display: flex;
-    /*max-height: 100vh;*/
     max-width: 100%;
 }
 
@@ -262,7 +223,7 @@ p {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     padding-top: 0;
     margin: 0;
@@ -270,59 +231,6 @@ h1 {
 
 section p + p {
     margin-top: 1rem;
-}
-
-/*section img {
-    width: 20em;
-    aspect-ratio: 1;
-}*/
-
-.serious {
-    background: var(--clr-gradient-serious);
-    color: var(--clr-logo-text);
-}
-
-.serious-content {
-    background-image: url("../img/serious.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50%;
-    padding-inline: 2em;
-}
-
-.fun {
-    background: var(--clr-gradient-fun);
-    color: var(--clr-logo-text);
-}
-
-.fun-content {
-    background-image: url("../img/fun.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50%;
-    padding-inline: 2em;
-}
-
-.new {
-    background: var(--clr-gradient-new);
-    color: var(--clr-logo-text);
-}
-
-.new-content {
-    background-image: url("../img/new.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50%;
-    padding-inline: 2em;
 }
 
 ul {
@@ -355,43 +263,51 @@ p.usp-body {
 }
 
 @media (min-width: 50rem) {
-    header {
-        padding-inline: 2rem;
-    }
-    .hero2 {
-        flex-direction: row;
-        gap: 3em;
-    }
-    .hero2 img {
-        transform: translateX(0);
-    }
-    .logo-img {
-        margin-left: -1em;
-    }
-    .report-btn {
-        display: inline;
-    }
-    .serious-content {
-        padding-top: 12em;
-        padding-left: 35vw;
-        padding-bottom: 10em;
-    }
-    .fun-content {
-        padding-right: 35vw;
-        background-position: right;
-        padding-top: 12em;
-        padding-bottom: 10em;
-    }
-    .new-content {
-        padding-left: 35vw;
-        padding-top: 12em;
-        padding-bottom: 10em;
-    }
     ul {
         flex-direction: row;
         /*max-width: 60vw;*/
     }
     .climbingloggerburner img {
-        transform: scale(1);
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    .cta {
+        flex-direction: row;
+        align-items: flex-end;
+        width: 100%;
+        height: 20rem;
+        padding-top: 0;
+        max-height: 20vmax;
+    }
+
+    .cta .screenshot-session {
+        order: 1;
+        width: 33%;
+        z-index: 1;
+    }
+
+    .cta .cta-wrap {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+
+    .cta .bugs {
+        width: 50%;
+    }
+
+    .cta .cta-button {
+        width: 50%;
+    }
+
+    .cta-button h1 {
+        font-size: 4vw;
+        line-height: 1;
+    }
+
+    h1 {
+        font-size: 6vw;
     }
 }

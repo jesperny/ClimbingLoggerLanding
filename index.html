@@ -8,20 +8,25 @@
 </head>
 <body>
     <section class="climbingloggerburner">
-        <img src="img/Cl-crimp-pink-transp.png" alt="Climging Logger">
+        <img src="img/Cl-crimp-pink-transp-crop.png" alt="Climging Logger">
     </section>
     <section class="cta">
-        <button class="cta-button">
-            <a href="https://testflight.apple.com/join/94lgy7yE">
-                <div>
-                    <h1>Try the beta</h1>
-                    <h2>on TestFlight</h2>
-                    <h3>(iPhone only for now)</h3>
-                </div>
-            </a>
-        </button>
-        <img class="bugs" src="img/bugs.png" alt="Beware! Here be bugs!">
-        <img src="img/mockup.png" alt="Screenshot">
+        <div class="cta-wrap">
+            <button class="cta-button">
+                <a href="https://testflight.apple.com/join/94lgy7yE">
+                    <div>
+                        <h1>Try the beta</h1>
+                        <h2>on TestFlight</h2>
+                        <h3>(iPhone only for now)</h3>
+                    </div>
+                </a>
+            </button>
+            <picture class="bugs">
+                <source media="(min-width: 50rem)" srcset="img/bugs-crop.png">
+                <img src="img/bugs-crop-narrow.png">
+            </picture>
+        </div>
+        <img class="screenshot-session" src="img/mockup.png" alt="Screenshot of a session">
     </section>
     <section class="training-themes">
         <div class="preamble">
@@ -29,10 +34,18 @@
             <p>Weird, right? But. You get:</p>
         </div>
         <h1>Training Themes</h1>
-        <div class="tags">
-            <div class="fingers"><p>#Fingers</p></div>
-            <div class="shoulders"><p>#Rehab shoulders</p></div>
-            <div class="footwork"><p>#Footwork</p></div>
+        <div class="tags-wrapper">
+            <div class="tags">
+                <div class="fingers">
+                    <p>#Fingers</p>
+                </div>
+                <div class="shoulders">
+                    <p>#Rehab shoulders</p>
+                </div>
+                <div class="footwork">
+                    <p>#Footwork</p>
+                </div>
+            </div>
         </div>
         <ul>
             <li>
@@ -53,7 +66,7 @@
         </ul>
     </section>
     <section class="climbinglogger-tag">
-        <img src="img/tag.png" alt="Climbing logger tag">
+        <img src="img/tag-crop.png" alt="Climbing logger tag">
     </section>
     <section class="exercises">
         <h1>Exercises</h1>
@@ -75,7 +88,7 @@
             </li>
         </ul>
     </section>
-    <section class="climinglogger-logo">
+    <section class="climbinglogger-logo">
         <img src="img/Cl-light.png" alt="Climbing logger logo">
     </section>
     <section class="motivation">
